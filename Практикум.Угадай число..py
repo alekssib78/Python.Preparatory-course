@@ -25,7 +25,8 @@ import random
 conceived = int(input('Загадайте число от 1 до 100 и не говорите вслух :'))
 a = 1
 b = 100
-while True:
+number = None
+while number != conceived:
     number = random.randint(a, b)
     if number < conceived:
         a = number + 1
@@ -35,8 +36,7 @@ while True:
         b = number - 1
         print(number)
         print('<')
-    else:
-        print(number)
-        print('=')
-        print('Угадал')
-        break
+print(number)
+print('=')
+print('Угадал')
+
